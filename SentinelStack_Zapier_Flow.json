@@ -1,0 +1,30 @@
+{
+  "name": "Stripe Subscription \u2192 Mailgun + Sheet",
+  "trigger": {
+    "app": "Stripe",
+    "event": "checkout.session.completed"
+  },
+  "actions": [
+    {
+      "app": "Mailgun",
+      "event": "Send Email",
+      "email": {
+        "from": "info@sentinelstack.tech",
+        "to": "{{customer_email}}",
+        "subject": "V\u00e4lkommen till SentinelStack \u2013 Ditt konto \u00e4r aktivt!",
+        "html": "<p>Hej {{customer_name}},</p><p>Tack f\u00f6r ditt k\u00f6p av <strong>{{plan_name}}</strong> via Stripe!</p><p>\u2705 AI-baserad logggranskning<br>\u2705 GDPR/NIS2 PDF-rapport<br>\u2705 Onboardingst\u00f6d via e-post</p><p><strong>Tj\u00e4nstekatalog (PDF):</strong><br><a href='https://www.sentinelstack.tech/SentinelStack_Tjanstekatalog_utf8.pdf'>Ladda ner PDF</a></p><p>Har du fr\u00e5gor? Kontakta info@sentinelstack.tech</p><br><p>/Team SentinelStack</p>"
+      }
+    },
+    {
+      "app": "Google Sheets",
+      "event": "Create Spreadsheet Row",
+      "sheet": "Kunder",
+      "fields": {
+        "E-post": "{{customer_email}}",
+        "Plan": "{{plan_name}}",
+        "K\u00f6ptid": "{{timestamp}}",
+        "Stripe ID": "{{customer_id}}"
+      }
+    }
+  ]
+}

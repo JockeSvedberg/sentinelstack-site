@@ -1,0 +1,17 @@
+Fråga:
+Vilken information måste ges till användare enligt AI Act Artikel 13?
+
+Svar:
+Enligt Artikel 13 i EU:s AI-förordning, måste följande information ges till användare:
+
+1. Identifiering att en AI-system används: Användare måste informeras när de interagerar med en AI-system, eller när en sådan interaktion har en betydande inverkan på dem.
+
+2. Information om systemets kapacitet: Detta inkluderar dess syfte, dess funktion, och hur det kan påverka användarens beslut.
+
+3. Information om systemets begränsningar: Detta kan inkludera eventuella fel eller brister i systemets funktion.
+
+4. Mänsklig översyn: Användare måste informeras om möjligheten till mänsklig översyn av beslut som fattas av AI-systemet.
+
+5. Kontaktuppgifter: Användare måste ges kontaktuppgifter till den person eller organisation som är ansvarig för AI-systemet.
+
+Observera att detta är en förenklad sammanfattning av Artikel 13 och att den fullständiga texten bör konsulteras för mer detaljerad information. Dessutom kan det finnas ytterligare krav beroende på den specifika tillämpningen av AI-systemet.

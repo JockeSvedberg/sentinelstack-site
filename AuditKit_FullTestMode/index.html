@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AuditKit – Testmode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Testmode version of AuditKit landing page.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-page="home">
+<header><nav class="container"><a href="/" class="logo">AuditKit</a></nav></header>
+
+<section class="hero container">
+  <h1>Test AuditKit Checkout Flow</h1>
+  <p>This is the testmode version. Use Stripe card: 4242 4242 4242 4242</p>
+  <form id="payment-form" data-plan="starter">
+    <input required name="name" placeholder="Name" class="StripeElement">
+    <input required name="email" type="email" placeholder="Email" class="StripeElement">
+    <div id="card-element" class="StripeElement"></div>
+    <button class="btn-primary">Test Checkout</button>
+    <div id="payment-message"></div>
+  </form>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2025 SentinelStack AB – <a href="/privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<div id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-title" tabindex="-1">
+  <h2 id="cookie-title">We use cookies to improve your experience</h2>
+  <p>Manage your preferences or consent to full functionality. <a href="/privacy-policy.html">Read our cookie policy</a>.</p>
+  <button id="accept-necessary" class="primary">Accept necessary</button>
+  <button id="accept-all" class="primary">Accept all</button>
+  <button id="reject-all" class="secondary">Reject all</button>
+</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script defer src="/script.js"></script>
+</body>
+</html>
